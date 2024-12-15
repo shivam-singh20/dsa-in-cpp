@@ -24,14 +24,14 @@ int main (){
     int n,arr[1000],key;
     cout <<"Enter size of the array: ";
     cin>>n;
-    cout<<"Enter number in sorted form:\n";
+    cout<<"Enter number in ascending order:\n";
     for(int i=0;i<n;i++){
         cin>>arr[i];
     }
     cout<<"Enter the element to search for: ";
     cin>>key;
 
-    cout<<BinarySearch(arr,n,key);
+    cout<<"Number is present on "<<BinarySearch(arr,n,key)<<" index.";
 
     return 0;
 }
