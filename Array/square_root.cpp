@@ -3,11 +3,12 @@ using namespace std;
 
 int Square_root(int num)
 {
+    //if(num<2){return num};
     int ans,mid,start=0,end=num;
 
     while(start<=end){
         mid=start+(end-start)/2;
-        if(mid*mid==num){
+        if(mid*mid==num){  //To remove overflow use mid==num/mid;
             ans=mid;
             break;
         }
