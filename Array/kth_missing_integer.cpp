@@ -2,7 +2,7 @@
 using namespace std;
 
 int missing_integer(int arr[],int n,int k){
-    int start=0,end=n-1,mid,ans=-1;
+    int start=0,end=n-1,mid,ans=n;
     while(start<=end){
         mid=start+(end-start)/2;
         if(arr[mid]-mid-1>=k){
@@ -12,7 +12,7 @@ int missing_integer(int arr[],int n,int k){
         else
             start=mid+1;
     }
-    return ans+=k;
+    return ans+k;
 }
 
 int main (){
