@@ -1,8 +1,35 @@
 #include <iostream>
-#include<vector>
+#include<algorithm>
 using namespace std;
 
-int main (){
+void On(int arr[],int n,int target){
+    //Array should be in sorted form
+    int start=0,end=n-1;
+    while(start<end){
+        if(arr[start]+arr[end]==target){
+            cout<<start<<" "<<end;
+            break;
+        }
+        else if(arr[start]+arr[end]>target)
+            end--;
+        else
+            start++;
+    }
+}
+
+void On2(int arr[],int n,int target){
+
+    //For T.C O(n2)
+    cout<<"The numbers are: ";
+    for(int i=0;i<n-1;i++){
+        for(int j=i+1;j<n;j++){
+            if(arr[i]+arr[j]==target)
+                cout<<arr[i]<<" "<<arr[j];
+        }
+    }
+}
+
+int main(){
     int arr[1000],n,target;
     cout<<"Enter size of the array: ";
     cin>>n;
@@ -12,15 +39,11 @@ int main (){
     }
     cout<<"Enter target: ";
     cin>>target;
-    //For T.C O(n2)
-    cout<<"Two sum is: ";
-    for(int i=0;i<n-1;i++){
-        for(int j=i+1;j<n;j++){
-            if(arr[i]+arr[j]==target){
-                cout<<arr[i]<<" "<<arr[j];
-            }
-        }
-    }
     
+    On2(arr,n,target);
+    cout<<"\nThe indexes are: ";
+    On(arr,n,target);
+
+
     return 0;
 }
