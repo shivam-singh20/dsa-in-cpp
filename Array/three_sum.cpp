@@ -3,7 +3,29 @@ using namespace std;
 
 // For T.C - O(n2) and S.C - O(1)
 bool n2(int arr[], int n, int target){
-    
+
+     //Sorting the array
+
+     for(int i=n-2;i>=0;i--){
+        for(int j=0;j<=i;j++){
+            if(arr[j]>arr[j+1])
+                swap(arr[j],arr[j+1]);
+        }
+     }//Bubble sort
+
+     for(int i=0;i<n-2;i++){
+        int num=target-arr[i];
+        int start=i+1,end=n-1;
+        while(start<end){
+            if(arr[start]+arr[end]==num)
+                return 1;
+            else if(arr[start]+arr[end]<num)
+                start++;
+            else 
+                end--;
+        }
+     }
+    return 0;
 }
 
 // For T.C - O(n3) and S.C - O(1)
@@ -26,6 +48,17 @@ bool On3(int arr[], int n, int target)
 // For T.C - O(n2logn) and S.C - O(1)
 bool n2logn(int arr[], int n, int target)
 {
+        // Sorting the array
+
+    for (int i = n - 2; i >= 0; i--)
+    {
+        for (int j = 0; j <= i; j++)
+        {
+            if (arr[j] > arr[j + 1])
+                swap(arr[j], arr[j + 1]);
+        }
+    } // Bubble sort
+
     for (int i = 0; i < n - 2; i++)
     {
         for (int j = i + 1; j < n - 1; j++)
@@ -58,7 +91,14 @@ int main()
     }
     cout << "Enter target: ";
     cin >> target;
+
+// For T.C - O(n3) and S.C - O(1)
     cout << On3(arr, n, target) << endl;
-    cout << n2logn(arr, n, target);
+
+// For T.C - O(n2logn) and S.C - O(1)
+    cout << n2logn(arr, n, target) << endl;
+
+// For T.C - O(n2) and S.C - O(1)
+    cout << n2(arr, n, target) << endl;
     return 0;
 }
