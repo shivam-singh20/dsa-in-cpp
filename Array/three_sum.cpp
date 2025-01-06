@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+// For T.C - O(n2) and S.C - O(1)
+bool n2(int arr[], int n, int target){
+    
+}
+
 // For T.C - O(n3) and S.C - O(1)
 bool On3(int arr[], int n, int target)
 {
