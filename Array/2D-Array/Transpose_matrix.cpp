@@ -1,11 +1,26 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
-//For T.C - O(n2) and S.C - O(n2)
+//For T.C - O(n2) and S.C - O(1) row=col=n
 
+void transpose(int matrix[][10],int row,int col){
 
-//For T.C - O(n2) and S.C - O(n2)
+    cout<<"Transpose of matrix is:\n";
+
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            if(i<=j){
+            swap(matrix[i][j],matrix[j][i]);
+            }
+        }
+       
+    }
+   
+
+    
+}
+
+//For T.C - O(n2) and S.C - O(n2) row=col=n
 
 void trans(int matrix[][10],int row,int col){
 
@@ -52,7 +67,7 @@ int main (){
         cout<<endl;
     }
 
-    trans(matrix,row,col);
+    transpose(matrix,row,col);
    
     return 0;
 }
