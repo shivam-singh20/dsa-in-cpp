@@ -8,16 +8,17 @@ void transpose(int matrix[][10],int row,int col){
     cout<<"Transpose of matrix is:\n";
 
     for(int i=0;i<row;i++){
-        for(int j=0;j<col;j++){
-            if(i<=j){
+        for(int j=i+1;j<col;j++){
             swap(matrix[i][j],matrix[j][i]);
-            }
-        }
-       
+        } 
     }
-   
 
-    
+    for(int i=0; i<row; i++){
+        for(int j=0; j<col; j++){
+            cout<<matrix[i][j]<<" ";
+        }
+        cout<<endl;
+    }
 }
 
 //For T.C - O(n2) and S.C - O(n2) row=col=n
@@ -66,6 +67,7 @@ int main (){
         }
         cout<<endl;
     }
+    trans(matrix,row,col);
 
     transpose(matrix,row,col);
    
