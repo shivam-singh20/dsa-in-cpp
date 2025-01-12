@@ -30,6 +30,37 @@ void Rotate_by_90(vector<vector<int>>matrix, int n){
     }
 }
 
+//Rotating matrix by 180 degree
+void Rotate_by_180(vector<vector<int>>matrix, int n){
+     //Reverse row
+     for(int i=0;i<n;i++){
+        int start=0, end=n-1;
+        while(start<end){
+            swap(matrix[i][start],matrix[i][end]);
+            start++;
+            end--;
+        }
+     }
+     //Reverse column
+     for(int j=0; j<n; j++){
+        int start=0, end=n-1;
+        while(start<end){
+            swap(matrix[start][j],matrix[end][j]);
+            start++;
+            end--;
+        }
+    
+     }
+
+    cout<<"Rotated matrix by 180 is:\n";
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            cout<<matrix[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+
 
 
 //For T.C - O(n2) and S.C - O(n2)
@@ -60,5 +91,6 @@ int main (){
             cin>>matrix[i][j];
     }
     Rotate_by_90(matrix,n);
+    Rotate_by_180(matrix,n);
     return 0;
 }  
