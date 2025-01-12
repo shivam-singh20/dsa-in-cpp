@@ -21,7 +21,7 @@ void Rotate_by_90(vector<vector<int>>matrix, int n){
         }
     }
 
-    cout<<"Rotated matrix by 90 is:\n";
+    cout<<"Rotated matrix by 90 degree is:\n";
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
             cout<<matrix[i][j]<<" ";
@@ -52,7 +52,7 @@ void Rotate_by_180(vector<vector<int>>matrix, int n){
     
      }
 
-    cout<<"Rotated matrix by 180 is:\n";
+    cout<<"Rotated matrix by 180 degree is:\n";
     for(int i=0; i<n; i++){
         for(int j=0; j<n; j++){
             cout<<matrix[i][j]<<" ";
@@ -61,7 +61,32 @@ void Rotate_by_180(vector<vector<int>>matrix, int n){
     }
 }
 
+//Rotating matrix by 270 degree
+void Rotate_by_270(vector<vector<int>>matrix, int n){
+    //Transpose matrix
+    for(int i=0; i<n-1; i++){
+        for(int j=i+1; j<n; j++){
+            swap(matrix[i][j],matrix[j][i]);
+        }
+    }
+    //Column reverse
+    for(int j=0; j<n; j++){
+        int start=0, end=n-1;
+        while(start<end){
+            swap(matrix[start][j],matrix[end][j]);
+            start++;
+            end--;
+        }
+    }
 
+    cout<<"Rotated matrix by 270 degree is:\n";
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            cout<<matrix[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
 
 //For T.C - O(n2) and S.C - O(n2)
 void ORotate_by_90(vector<vector<int>>matrix, int n) {
@@ -90,7 +115,17 @@ int main (){
         for(int j=0; j<n; j++)
             cin>>matrix[i][j];
     }
+    
+    cout<<"Given matrix is:\n";
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            cout<<matrix[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+
     Rotate_by_90(matrix,n);
     Rotate_by_180(matrix,n);
+    Rotate_by_270(matrix,n);
     return 0;
 }  
