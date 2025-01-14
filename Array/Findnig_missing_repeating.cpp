@@ -2,6 +2,14 @@
 #include <vector>
 using namespace std;
 
+// For T.C - O(n) and S.C - O(1)
+void II_method(int arr[], int n){
+    
+}
+
+
+// For T.C - O(n) and S.C - O(n)
+
 void I_method(int arr[], int n){
     vector<int> count(n,0);
     for(int i=0; i<n; i++)
