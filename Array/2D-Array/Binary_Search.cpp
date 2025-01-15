@@ -47,7 +47,7 @@ int main (){
         for (int j = 0; j < col; j++)
         {
             cin >> matrix[i][j];
-        }
+        }  
     }
 
     cout<<"Enter element to search for: ";

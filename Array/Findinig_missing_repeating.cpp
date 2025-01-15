@@ -4,7 +4,28 @@ using namespace std;
 
 // For T.C - O(n) and S.C - O(1)
 void II_method(int arr[], int n){
-    
+    for(int i=0; i<n; i++)
+        arr[i]--;
+
+    for(int i=0; i<n; i++){
+        arr [arr[i] % n] += n;
+        cout<<arr[i] <<" ";
+    }
+
+    // //Missing number
+    // cout<<"Missing number in the array is: ";
+    // for(int i=0; i<n; i++){
+    //     if(arr[i]/n==0)
+    //         cout<<i+1;
+    //         break; 
+    // }
+    // cout<<endl;
+    //Repeating number
+    cout<<"Repeating number in the array is: ";
+    for(int i=0; i<n; i++){
+        if(arr[i]/n==2)
+            cout<<i+1; 
+    }
 }
 
 
@@ -18,7 +39,7 @@ void I_method(int arr[], int n){
     //Missing number
     for(int i=0; i<n; i++){
         if(count[i]==0){
-            cout<<"Missng number is: "<< i+1;
+            cout<<"Missing number is: "<< i+1;
             break;
         }
     }
@@ -39,5 +60,7 @@ int main (){
         cin>>arr[i];
     
     I_method(arr,n);
+    cout<<endl;
+    II_method(arr,n);
     return 0;
 }
