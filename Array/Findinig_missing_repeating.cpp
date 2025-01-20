@@ -8,8 +8,7 @@ void II_method(int arr[], int n){
         arr[i]--;
 
     for(int i=0; i<n; i++){
-        arr [arr[i] % n] += n;
-        cout<<arr[i] <<" ";
+        arr[arr[i] % n] += n;
     }
 
     // //Missing number
@@ -17,7 +16,7 @@ void II_method(int arr[], int n){
     // for(int i=0; i<n; i++){
     //     if(arr[i]/n==0)
     //         cout<<i+1;
-    //         break; 
+    //         break;   
     // }
     // cout<<endl;
     //Repeating number
@@ -59,8 +58,8 @@ int main (){
     for(int i=0; i<n; i++)
         cin>>arr[i];
     
-    I_method(arr,n);
-    cout<<endl;
+    // I_method(arr,n);
+    // cout<<endl;
     II_method(arr,n);
     return 0;
 }
