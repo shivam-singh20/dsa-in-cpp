@@ -27,14 +27,14 @@ int main()
     int sum = 0, index = 0;
     while (index < s.size() - 1)
     {
-        if ( num(s[index]) < num(s[index+1]) )
-            sum-=num(s[index]);
+        if (num(s[index]) < num(s[index + 1]))
+            sum -= num(s[index]);
         else
-            sum+=num(s[index]);
+            sum += num(s[index]);
         index++;
     }
-    sum+=num(s[s.size()-1]);
-    cout<<"Integer number is: "<<sum;
+    sum += num(s[s.size() - 1]);
+    cout << "Integer number is: " << sum;
 
     return 0;
 }
