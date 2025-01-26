@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+string factorial(string num){
+       
+}
+
 int main (){
-       return 0;
+int fact;
+     return 0;
 }   
