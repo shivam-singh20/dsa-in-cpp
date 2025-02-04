@@ -3,6 +3,7 @@
 #include <algorithm>
 using namespace std;
 
+//Adding large numbers using string
 string addString(string num1, string num2)
 {
     int index1 = num1.size() - 1, index2 = num2.size() - 1;
