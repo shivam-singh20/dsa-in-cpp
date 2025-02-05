@@ -12,7 +12,7 @@ void II_method(int arr[], int n){
     }
 
     // //Missing number
-    // cout<<"Missing number in the array is: ";
+    // cout<<"Missing number in the array is: ";    
     // for(int i=0; i<n; i++){
     //     if(arr[i]/n==0)
     //         cout<<i+1;
