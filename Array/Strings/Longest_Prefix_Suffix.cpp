@@ -7,30 +7,31 @@ using namespace std;
 int main (){
     string s;
     cout<<"Enter string: ";
-    cin>>s;
-    vector<int> lps(s.size(),0);
-    int prefix = 0, suffix = 1;
+    getline(cin,s); //abcabdabcabdabdab
 
-    while(suffix<s.size())
+    vector<int>lps(s.size(),0);
+    int pre = 0, suff = 1;
+
+    while(suff < s.size())
     {
-        if(s[prefix]==s[suffix])
+        //If prefix and suffix is matching
+        if(s[pre] == s[suff])
         {
-            lps[suffix] = prefix+1;
-            prefix++,suffix++;
+            lps[suff] = pre+1;
+            pre++,suff++;
         }
-        else
-        {
-            if(prefix==0)
+        //If prefix and suffix not matching
+        else{
+            if(pre == 0)
             {
-                lps[suffix] = 0;
-                suffix++;
+                lps[suff] = 0;
+                suff++;
             }
             else
-                prefix = lps[prefix-1];
+                pre = lps[pre - 1];
         }
     }
-
-    cout<<"Longest Prefix Suffix is: "<<lps[s.size()-1];
+    cout<<"Length of longest prefix suffix is: "<<lps[s.size()-1];
 
     return 0;
 }
