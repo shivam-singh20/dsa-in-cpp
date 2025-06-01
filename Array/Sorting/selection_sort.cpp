@@ -1,38 +1,60 @@
 #include <iostream>
 using namespace std;
 
-void selection(int arr[], int n)
+// Applying selection sort for ascending order
+
+void selection_asc(int arr[], int n)
 {
-    //Applying selection sort for ascending order
-        for(int i=0; i<n; i++)
+    for (int i = 0; i < n; i++)
+    {
+        // Same as concept code of selection sort
+        int index = i;
+        for (int j = i + 1; j < n; j++)
         {
-            //Same as concept code of selection sort
-            int index = i;
-            for(int j = i+1; j<n; j++)
+            if (arr[j] < arr[index])
             {
-                if(arr[j] < arr[index])
-                {
-                    index = j;
-                }
+                index = j;
             }
-            swap(arr[i],arr[index]);
         }
-        for(int i=0; i<n; i++)
+        swap(arr[i], arr[index]);
+    }
+    cout << "Sorted in ascending order: ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
+}
+
+// Applying selection sort for descending order
+void selection_desc(int arr[], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        int index = i;
+        for (int j = i + 1; j < n; j++)
         {
-            cout<<arr[i]<<" ";
+            if (arr[j] > arr[index])
+                index = j;
         }
+        swap(arr[i], arr[index]);
+    }
+    cout << "Sorted in descending order: ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr[i] << " ";
+    }
 }
 
 int main()
 {
-    int arr[1000],n;
-    cout<<"Enter size of the array: ";
-    cin>> n;
-    cout<<"Enter elements of array:\n";
+    int arr[1000], n;
+    cout << "Enter size of the array: ";
+    cin >> n;
+    cout << "Enter elements of array:\n";
 
-    for(int i=0; i<n; i++)
+    for (int i = 0; i < n; i++)
     {
-        cin>>arr[i];
+        cin >> arr[i];
     }
 
     // Concept in selection sort
@@ -46,6 +68,8 @@ int main()
     // }
     // cout<<"Smallest index at which the value is present is: "<<index;
 
-    selection(arr,n);
+    selection_asc(arr, n);
+    cout << endl;
+    selection_desc(arr, n);
     return 0;
 }
