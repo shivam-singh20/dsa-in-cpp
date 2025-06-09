@@ -18,6 +18,22 @@ int main (){
     getline(cin,s);   //Print spaces
     cout<<s<<endl<<s.size();
 
+    //Lowecase to Uppercase
+    string str = "hellojava";
+    for(int i=0; i<str.length(); i++)
+    {
+        str[i]=toupper(str[i]);
+    }
+
+    //Uppercase to lowercase
+    string str = "HELLOJAVA";
+    for(int i=0; i<str.length(); i++)
+    {
+        str[i]=tolower(str[i]);
+    }
+    cout<<"Lower case is: "<<str;
+
+
     string s1 = "Shivam", s2 = "Kumar";
     string s3 = s1+s2; //Append
     s1=s1+"Singh";
