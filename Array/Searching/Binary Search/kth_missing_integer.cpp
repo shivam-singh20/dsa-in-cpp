@@ -1,4 +1,4 @@
-#include <iostream>
+#include<iostream>
 using namespace std;
 
 int missing_integer(int arr[],int n,int k){
