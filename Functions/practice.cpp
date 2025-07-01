@@ -1,19 +1,23 @@
-#include<iostream>
-#include<climits>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
-    int arr[1000]={3,4,1,2,6};
-    int min = INT_MAX, ans;
-    for(int i=0; i<5; i++)
+    int n;
+    cin>>n;
+    vector<int>arr(n);
+    for(int i=0; i<n; i++)
+        cin>>arr[i];
+    int maximum_sum = 0;
+    for(int i=0; i<n; i++)
     {
-        if(arr[i]<min)
+        int prefix = 0;
+        for(int j=i; j<n; j++)
         {
-            min = arr[i];
+            prefix = prefix + arr[j];
+            maximum_sum = max(maximum_sum,prefix);
         }
-        cout<<i;
     }
-    
+    cout<<maximum_sum;
 
     return 0;
 }
