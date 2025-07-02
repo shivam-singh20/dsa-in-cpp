@@ -39,6 +39,7 @@ int main()
     cin >> n;
 
     vector<int> arr(n);
+    cout<<"Enter elements in the array:\n";
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
