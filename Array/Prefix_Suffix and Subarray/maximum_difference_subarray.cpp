@@ -39,7 +39,21 @@ int On_On(vector<int>arr, int n)
 
 int On(vector<int>arr, int n)
 {
-    
+    int ans = -1;
+
+	int mini = arr[0];
+	
+	for (int i=1; i<n; i++) {
+	    
+	    if (arr[i] <= mini) {
+	        mini = arr[i];
+	    }
+
+	    else {
+	        ans = max(ans, arr[i] - mini);
+	    }
+	}
+    return ans;
 }
 
 
