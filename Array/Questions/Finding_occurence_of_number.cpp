@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//T.C - O(n), S.C - O(1)
 vector<int> I_method(int arr, int n)
 {
 
