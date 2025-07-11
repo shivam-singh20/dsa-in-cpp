@@ -7,12 +7,13 @@ vector<int> I_method(int arr, int n)
 
 }
 
+//T.C - O(n), S.C - O(n)
 vector<int> II_method(int arr, int n)
 {
     vector<int>count(n,0);
     for(int i=0; i<n; i++)
     {
-        count[arr - 1]++;
+        count[arr[i] - 1]++;
     }
     return count;
 }
