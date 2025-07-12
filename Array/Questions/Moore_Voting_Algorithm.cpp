@@ -6,7 +6,7 @@ int Winner(vector<int>arr,int n)
     int candidate, vote_count=0;
     for(int i=0; i<n; i++)
     {
-        if(vote_count==0)
+        if(vote_count==0) 
         {
             candidate = arr[i];
             vote_count = 1;
