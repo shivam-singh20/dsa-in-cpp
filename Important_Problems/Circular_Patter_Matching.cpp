@@ -25,10 +25,10 @@ int main (){
     string str1, str2;
 
     cout<<"Enter string 1: ";
-    getline(cin,str1);
+    getline(cin,str1); //cdeabroab
 
     cout<<"Enter string 2: ";
-    getline(cin,str2);
+    getline(cin,str2); //abcde
 
     //Building a string to find lps
     string s = str1;
