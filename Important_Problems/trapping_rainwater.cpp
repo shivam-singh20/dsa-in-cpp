@@ -15,6 +15,7 @@ int Maximum_Water(int heights[], int n)
             index = i;
         }
     }
+
     int left_max = 0, right_max = 0, sum = 0;
 
     // Solving left part
