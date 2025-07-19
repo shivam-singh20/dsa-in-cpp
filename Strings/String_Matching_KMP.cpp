@@ -1,9 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// T.C - O(M+N) and S.C - O(m)
-
- 
 // T.C - O(M*N) and S.C - O(1)
 
 int brute_force(string haystack, string needle)
@@ -27,8 +24,12 @@ int brute_force(string haystack, string needle)
 
 int main()
 {
-    string haystack = "Shivam";
-    string needle = "hiv";
+    string haystack;  //abacdabad
+    cout<<"Enter string in haystack: ";
+    getline(cin,haystack);
+    string needle; //abad
+    cout<<"Enter string in needle: ";
+    getline(cin,needle);
 
     cout << "String is matching from " << brute_force(haystack, needle) << " index.";
 
