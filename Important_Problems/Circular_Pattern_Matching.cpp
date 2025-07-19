@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void lps_find(string s, vector<int>lps)
+void lps_find(string s, vector<int>& lps)
 {
     int prefix = 0, suffix = 1;
     while(suffix<s.size())
@@ -30,13 +30,13 @@ int main (){
     cout<<"Enter string 2: ";
     getline(cin,str2); //abcde
 
-    //Building a string to find lps
+    //Building a string to operate lps
     string s = str1;
     s += str1;
 
     //String matching code
-    vector<int>lps(s.size(),0);
-    lps_find(s,lps);
+    vector<int>lps(str2.size(),0);
+    lps_find(str2,lps);
 
     bool ans = 0;
 
