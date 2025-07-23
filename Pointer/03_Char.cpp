@@ -18,6 +18,8 @@ int main (){
     cout<<(void*)arr<<endl;
     cout<<(void*)ptr<<endl;
     cout<<static_cast<void*>(arr)<<endl;
+    cout<<static_cast<void*>(&arr)<<endl;
+
 
     return 0;
 }

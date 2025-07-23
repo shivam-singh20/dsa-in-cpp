@@ -22,7 +22,7 @@ int lps(string s)
         string temp = "";
         for(int j=n-i; j<n; j++)
         {
-            temp += s[j];
+            temp += s[j]; 
         }
         suffix[i-1] = temp;
     }
