@@ -69,45 +69,60 @@ void Table(int num,int n)
     Table(num, n);
 }
 
+void Print3(int num)
+{
+    if(num == 1)
+    {
+        cout<<1<<" ";
+        return;
+    }
+    Print3(num - 1);
+    cout<<num<<" ";
+}
+
 int main (){
-    cout<<"Printing \"Coder Army\" 10 times using recursion"<<endl;
+    // cout<<"Printing \"Coder Army\" 10 times using recursion"<<endl;
 
-    int n1 = 10;
-    Print(n1);
-    cout<<endl;
+    // int n1 = 10;
+    // Print(n1);
+    // cout<<endl;
 
-    cout<<"Printing all odd number from n to 1 using recursion"<<endl;
+    // cout<<"Printing all odd number from n to 1 using recursion"<<endl;
 
-    int n2;
-    cin>>n2;
-    Odd(n2);
-    cout<<endl;
+    // int n2;
+    // cin>>n2;
+    // Odd(n2);
+    // cout<<endl;
 
-    cout<<"Printing all numbers from 1 to n using recursion."<<endl;
+    // cout<<"Printing all numbers from 1 to n using recursion."<<endl;
 
-    int n3 = 1, num1;
-    cin>>num1;
-    Print1(n3, num1);
-    cout<<endl;
+    // int n3 = 1, num1;
+    // cin>>num1;
+    // Print1(n3, num1);
+    // cout<<endl;
 
-    cout<<"Printing all odd numbers from 1 to n using recursion."<<endl;
-    int n4 = 1, num2;
-    cin>>num2;
-    Odd1(n4,num2);
-    cout<<endl;
+    // cout<<"Printing all odd numbers from 1 to n using recursion."<<endl;
+    // int n4 = 1, num2;
+    // cin>>num2;
+    // Odd1(n4,num2);
+    // cout<<endl;
 
-    cout<<"Printing all numbers from 10 to n using recursion, where n will be greater than 10."<<endl;
-    int n5 = 10, num3;
-    cin>>num3;
-    Print2(n5,num3);
-    cout<<endl;
+    // cout<<"Printing all numbers from 10 to n using recursion, where n will be greater than 10."<<endl;
+    // int n5 = 10, num3;
+    // cin>>num3;
+    // Print2(n5,num3);
+    // cout<<endl;
 
 
-    cout<<"Write a Table program using recursion. Take input number n, and print its table."<<endl;
-    int n6,num4 = 1;
-    cin>>n6;
-    cout<<n6<<" ";
-    Table(num4,n6);
+    // cout<<"Write a Table program using recursion. Take input number n, and print its table."<<endl;
+    // int n6,num4 = 1;
+    // cin>>n6;
+    // cout<<n6<<" ";
+    // Table(num4,n6);
 
+    cout<<"Printing number from 1 to n with only one parameter passed."<<endl;
+    int num5;
+    cin>>num5;
+    Print3(num5);
     return 0;
 }
