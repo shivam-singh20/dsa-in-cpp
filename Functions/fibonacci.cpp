@@ -1,21 +1,23 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main (){
+    // Printing fibonacci series
     int n;
-    cout<<"Enter a number: ";
+    cout<<"Enter value of n: ";
     cin>>n;
-    int arr[100];
-    arr[0]=0;
-    arr[1]=1;
+    int mod = 1e9 + 7;
 
-    for(int i=2;i<n;i++){
-        arr[i]=arr[i-1]+arr[i-2];
-    }
-    cout<<arr[n-1];
+    vector<int>fib(n+1);
+    fib[0] = 0;
+    fib[1] = 1;
 
+    for(int i=2; i<=n; i++)
+        fib[i] = (fib[i-1] + fib[i-2]) % mod ;
 
-
-
+    cout<<"Fibonacci series till "<<n<<" is: ";
+    for(int i=0; i<=n; i++)
+        cout<<fib[i]<<" "; 
+ 
     return 0;
 }
