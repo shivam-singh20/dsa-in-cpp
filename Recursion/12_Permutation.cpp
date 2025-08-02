@@ -24,6 +24,25 @@ void Finding_Permutation(vector<int> &arr, vector<vector<int>> &ans, vector<int>
     }
 }
 
+// 2nd method
+
+void Find_Permutation(vector<int>& arr, vector<vector<int>>&ans, int index)
+{
+    // Base case
+    if(index == arr.size())
+    {
+        ans.push_back(arr);
+        return;
+    }
+
+    for(int i=index; i<arr.size(); i++)
+    {
+        swap(arr[i],arr[index]);
+        Find_Permutation(arr,ans,index+1);
+        swap(arr[i],arr[index]);
+    }
+}
+
 int main()
 {
     int n;
@@ -45,6 +64,18 @@ int main()
     {
         for (int j = 0; j < ans[i].size(); j++)
             cout << ans[i][j] << " ";
+        cout << endl;
+    }
+
+    // 2nd Method
+    vector<vector<int>> ans1;
+    Find_Permutation(arr,ans1,0);
+
+    cout << "All possible ways to arrange the array are:\n";
+    for (int i = 0; i < ans.size(); i++)
+    {
+        for (int j = 0; j < ans[i].size(); j++)
+            cout << ans1[i][j] << " ";
         cout << endl;
     }
     return 0;
