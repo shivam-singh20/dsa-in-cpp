@@ -35,6 +35,13 @@ int Winner(vector<bool>person, int n, int k, int index, int person_left)
 
 // T.C - O(n) S.C - O(n)
 
+int Winner2(int n, int k)
+{
+    if(n==1)
+        return 0;
+    return (Winner2(n-1,k) + k) % n;
+}
+
 
 
 int main (){
@@ -48,6 +55,7 @@ int main (){
     vector<bool>count_kill(n,0);
 
     cout<<"Winner is player number: "<<Winner(count_kill,n,k,0,n) + 1;
+    cout<<"\nWinner is player number: "<<Winner2(n,k) + 1;
 
     return 0;
 }
