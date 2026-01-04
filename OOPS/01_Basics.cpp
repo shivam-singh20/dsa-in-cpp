@@ -9,8 +9,18 @@ class student
         string grade;
 };
 
+class a
+{
+    char c; 
+    int b;
+    char h;
+};
+
 int main()
 {
+    a obj;
+    cout<<sizeof(obj)<<endl;
+
     student s1; //student is user defined data_type and s1 is an object for student.
     s1.name = "Shivam";
     s1.roll_number = 27;
