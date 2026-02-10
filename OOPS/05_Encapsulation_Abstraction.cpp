@@ -56,24 +56,64 @@ class access_modifiers{
     }
 };
 
-// External code
+// Derived class example
 
+class Person { // Base class
+    private:
+        int age;
+    protected:
+        string cast;
+    public:
+        string name;
+};
+
+class student:public Person{ // Derived class
+    public:
+        int roll_no;
+    protected:
+        int stu_id;
+    public:
+        int marks;
+};
+
+class teacher: protected Person{
+    public:
+        int salary;
+    protected:
+        int teach_id;
+    public:
+        int department;
+};
+
+class staff: private Person{
+    public:
+        string position;
+    protected:
+        int staff_id;
+    public:
+        int deployed;
+};
+
+
+// External code
 int main()
 {
-    access_modifiers a1;
-    // a1.a; X cannot access private class in an external code
-    // a1.b; X cannot access protected class in an external code
-    a1.c; // can access public class in an external code
+    // access_modifiers a1;
+    // // a1.a; X cannot access private class in an external code
+    // // a1.b; X cannot access protected class in an external code
+    // a1.c; // can access public class in an external code
 
+    // customer c1("Shivam", 101, 1000);
+    // c1.display();
 
+    // c1.deposit(-10);
+    // c1.display();
 
-    customer c1("Shivam", 101, 1000);
-    c1.display();
+    // c1.withdraw(1000);
+    // c1.display();
 
-    c1.deposit(-10);
-    c1.display();
-
-    c1.withdraw(1000);
-    c1.display();
+    student s1;
+    teacher t1;
+    staff st1;
 
 }
