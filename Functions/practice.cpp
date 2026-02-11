@@ -1,22 +1,19 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
-
-int square_sum(int n)
-{
-    if(n==1)
-        return n;
-    return (n*n*n) + square_sum(n-1);
-}
 
 int main()
 {
-    int num;
-    cin>>num;
-    if(num == 0) 
+    int n;
+    cin>>n;
+    vector<int>arr(n);
+    arr[0] = 0;
+    arr[1] = 1;
+    for(int i=2; i<n; i++)
     {
-        cout<<0;
-        return 0;
+        arr[i] = arr[i-1] + arr[i-2];
     }
-    cout<<square_sum(num);
+    for(int i=0; i<n; i++)
+        cout<<arr[i]<<" ";
     return 0;
 }
