@@ -7,14 +7,14 @@ int main()
     cout << "Size till pattern should print: ";
     cin >> n;
 
-    // 1st Pattern - Square Pattern
-
+    cout<<"\n1st Pattern - Square Pattern\n";
+    cout<<endl;
     //* * * * * 
     //* * * * * 
     //* * * * *
     //* * * * * 
     //* * * * * 
-
+    
      for(int i=0; i<n; i++)
      {
          for(int j=0; j<n; j++)
@@ -24,7 +24,8 @@ int main()
          cout<<endl;
      }
 
-    // 2nd Pattern - L Pattern
+    cout<<"\n2nd Pattern - L Pattern\n";
+    cout<<endl;
 
     //* 
     //* *
@@ -36,12 +37,13 @@ int main()
     {
         for (int j = 0; j <= i; j++)
         {
-            cout << "*" << " ";
+            cout << "*";
         }
         cout << endl;
     }
 
-    // 2nd Pattern Reverse
+    cout<<"\n3rd Pattern - Mirror image of above Pattern\n";
+    cout<<endl;
 
     //     *
     //    **
@@ -61,7 +63,8 @@ int main()
         cout<<endl;
     }
 
-    //3rd Pattern - Reverse L Pattern
+    cout<<"\n4th Pattern - Reverse L Pattern\n";
+    cout<<endl;
 
     // * * * * * 
     // * * * *
@@ -73,12 +76,13 @@ int main()
     {
         for(int j=n-1; j>=i; j--)
         {
-            cout<<"*"<<" ";
+            cout<<"*";
         }
         cout<<endl;
     }
 
-    //3rd Pattern Reverse
+    cout<<"\n5th Pattern - Mirror image of above pattern\n";
+    cout<<endl;
 
     // *****
     //  ****
