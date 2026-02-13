@@ -7,7 +7,7 @@ int main()
     cout << "Size till pattern should print: ";
     cin >> n;
 
-    cout<<"Complex Pattern - 1"<<endl;
+    cout<<"\nComplex Pattern - 1\n"<<endl;
 
     // *
     // **
@@ -36,7 +36,7 @@ int main()
         cout<<endl;
     }
 
-    cout<<"\nComplex Pattern - 2"<<endl;
+    cout<<"\nComplex Pattern - 2\n"<<endl;
 
     //      *
     //     ***
@@ -62,7 +62,7 @@ int main()
         cout<<endl;
     }
 
-    cout<<"\nComplex Pattern - 3"<<endl;
+    cout<<"\nComplex Pattern - 3\n"<<endl;
 
     //***********
     // *********
@@ -87,7 +87,7 @@ int main()
         cout<<endl;
     }
 
-    cout<<"\nComplex Pattern - 4"<<endl;
+    cout<<"\nComplex Pattern - 4\n"<<endl;
 
     //      *
     //     ***
@@ -127,6 +127,5 @@ int main()
         }
         cout<<endl;
     }
-
 
 }
