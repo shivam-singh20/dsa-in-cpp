@@ -2,7 +2,7 @@
 using namespace std;
 
 // 1. Pair is a container where pairing is done.
-// 2. Syntax of pair is pair<type1,type2>
+// 2. Syntax of pair is pair<type1,type2>name_of_pair
 // 3. If you want to pair multiple values into a single pair then use pair inside pair.
 // 4. Implementation is done using class.
 
