@@ -46,6 +46,6 @@ class student: public Human{ // Derived class or child class
 
 int main()
 {
-    student s1(101,"Shivam",22,"Computer",99,5.10,75);
+    student s1(101,"Shivam",22,"Computer",99,5.10,75.6);
     s1.display();
 }
