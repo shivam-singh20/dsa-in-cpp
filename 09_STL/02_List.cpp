@@ -4,7 +4,7 @@ using namespace std;
 // 1. List is a container 
 // 2. It is implemented like doubly linked list
 // 3. We can push_back("values"), push_front("values"), pop_back()
-// 4. We can have access to front and back values of the list just like linked list
+// 4. We can have access to front and back values of the list just like linked list i.e. doubly linked list
 // 5. Syntax of list is list<data_type>name_of_list
 
 int main()
