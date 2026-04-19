@@ -43,7 +43,7 @@ class Complex {
 
     Complex operator +(Complex &C)
     {
-        Complex ans;
+        Complex ans; // Complex is the data_type here and ans is the variable
         ans.real = real + C.real;
         ans.img = img + C.img;
         return ans;
