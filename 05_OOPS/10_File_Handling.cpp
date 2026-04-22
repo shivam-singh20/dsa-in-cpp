@@ -6,46 +6,63 @@ using namespace std;
 // ofstream - Used to read and write the file at the same time.
 // ifstream - Used to read data from file.
 
-void creating_file()
-{
-    ofstream Hello("Shivam.cpp");
+class creating_file {
+    public:
+        void create_file()
+        {
+            ofstream file("example.txt");
 
-    if(Hello.is_open())
-    {
-        Hello<<"My name is Shivam Kumar Singh.";
-        Hello.close();
-        cout<<"File created sucessfully.";
-    }
+            if(file.is_open())
+            {
+                file<<"Hi I am a Simple text file.";
+                file.close();
+                cout<<"File is created sucessfully and message is written.";
+            }
 
-    else
-    {
-        cout<<"File cannot be created sucessfully.";
-    }
-}
+            else
+            {
+                cout<<"Not able to create a file.";
+            }
+        }
+};
 
-void removing_file()
-{
-    remove("Shivam.cpp");
-    remove("example.txt");
-    cout<<"Both files removed sucessfully";
-}
+class reading_file {
+    public:
+        void read_file()
+        {
+            ifstream fin;
+
+            //Open the file and then read contents inside the file
+            fin.open("example.txt");
+
+            string line;
+
+            while(getline(fin,line))
+            {
+                cout<<line;
+            }
+            fin.close(); // Free up all the resources.
+        }
+};
+
+
+
+class removing_file {
+    public:
+        void remove_file()
+        {
+            remove("example.txt");
+        }
+};
 
 int main()
 {
-    // ofstream file("Example.txt");
+    // creating_file obj;
+    // obj.create_file();
 
-    // if(file.is_open())
-    // {
-    //     file<<"Hello World";
-    //     file.close();
-    //     cout<<"File has been created";
-    // }
+    // reading_file R;
+    // R.read_file();
 
-    // else
-    // {
-    //     cout<<"Unable to create a file";
-    // }
-    // return 0;
-
-    removing_file();
+    removing_file rem;
+    rem.remove_file();
 }
